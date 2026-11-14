@@ -1,0 +1,258 @@
+
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Jenjang Pendidikan | Keris Pusaka Institute"
+  description="Mengenal jenjang pendidikan Perguruan Pencak Silat Keris Pusaka."
+>
+  <main class="jenjang-page">
+    <section class="hero">
+      <span class="label">PENDIDIKAN PERGURUAN</span>
+      <h1>Jenjang Pendidikan</h1>
+      <p>
+        Mengenal tingkatan pendidikan dan pembinaan
+        anggota Perguruan Pencak Silat Keris Pusaka.
+      </p>
+    </section>
+
+    <section class="content">
+      <div class="intro-card">
+        <h2>Tujuan Jenjang Pendidikan</h2>
+        <p>
+          Tingkat atau jenjang pendidikan bertujuan untuk membina
+          anggota perguruan mencapai prestasi sebagai atlit, pelatih,
+          wasit juri, dewan guru, guru besar dan menjadi pengurus
+          PPS Keris Pusaka.
+        </p>
+      </div>
+
+      <div class="level-section">
+        <h2>Dasar hingga Terampil</h2>
+        <div class="level-grid">
+          {[
+            "Dasar-1",
+            "Dasar-2",
+            "Dasar-3",
+            "Dasar-4",
+            "Madya-1",
+            "Madya-2",
+            "Madya-3",
+            "Madya-4",
+            "Terampil 1",
+            "Terampil 2",
+          ].map((level, index) => (
+            <div class="level-card">
+              <span class="level-number">{index + 1}</span>
+              <h3>{level}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="level-section">
+        <h2>Jenjang Pendekar</h2>
+        <div class="level-grid">
+          {[
+            "Pendekar Tingkat I",
+            "Pendekar Tingkat II",
+            "Pendekar Muda I",
+            "Pendekar Muda II",
+            "Pendekar Madya I",
+            "Pendekar Madya II",
+            "Pendekar Pratama I",
+            "Pendekar Pratama II",
+            "Pendekar Utama I",
+            "Pendekar Utama II",
+          ].map((level, index) => (
+            <div class="level-card">
+              <span class="level-number">{index + 11}</span>
+              <h3>{level}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="level-section">
+        <h2>Jenjang Pembina</h2>
+        <div class="level-grid">
+          {[
+            "Pembina Tingkat I",
+            "Pembina Tingkat II",
+            "Pembina Muda I",
+            "Pembina Muda II",
+            "Pembina Madya I",
+            "Pembina Madya II",
+            "Pembina Pratama I",
+            "Pembina Pratama II",
+            "Pembina Utama I",
+            "Pembina Utama II",
+          ].map((level, index) => (
+            <div class="level-card">
+              <span class="level-number">{index + 21}</span>
+              <h3>{level}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="level-section">
+        <h2>Jenjang Sesepuh</h2>
+        <div class="level-grid">
+          {[
+            "Sesepuh Tingkat I",
+            "Sesepuh Tingkat II",
+            "Sesepuh Muda I",
+            "Sesepuh Muda II",
+            "Sesepuh Madya I",
+            "Sesepuh Madya II",
+            "Sesepuh Pratama I",
+            "Sesepuh Pratama II",
+            "Sesepuh Utama I",
+            "Sesepuh Utama II",
+          ].map((level, index) => (
+            <div class="level-card">
+              <span class="level-number">{index + 31}</span>
+              <h3>{level}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="intro-card closing-card">
+        <h2>Ketentuan Materi Pendidikan</h2>
+        <p>
+          Ketentuan rincian materi pendidikan setiap tingkat diatur
+          dalam program dan pedoman pelatihan perguruan tersendiri
+          yang disepakati dan ditandatangani oleh dewan guru,
+          guru besar dan pengurus.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .jenjang-page {
+    background: #f8fafc;
+    color: #1e293b;
+  }
+
+  .hero {
+    background: #14532d;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+  }
+
+  .label {
+    color: #86efac;
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 16px 0;
+  }
+
+  .hero p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+  }
+
+  .content {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px 20px 50px;
+  }
+
+  .intro-card {
+    background: white;
+    border: 1px solid #bbf7d0;
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(20, 83, 45, 0.05);
+  }
+
+  .intro-card h2 {
+    color: #14532d;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .intro-card p {
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .level-section {
+    margin-top: 40px;
+  }
+
+  .level-section h2 {
+    color: #14532d;
+    margin-bottom: 25px;
+  }
+
+  .level-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .level-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: left;
+  }
+
+  .level-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 35px;
+    height: 35px;
+    background: #14532d;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+
+  .level-card h3 {
+    color: #166534;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .closing-card {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      padding: 50px 20px;
+    }
+
+    .content {
+      padding: 30px 20px 40px;
+    }
+
+    .intro-card {
+      padding: 20px;
+    }
+
+    .level-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
