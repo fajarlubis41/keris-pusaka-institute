@@ -1,0 +1,135 @@
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img
+        src="/images/logo-keris-pusaka.webp"
+        alt="Logo Keris Pusaka Indonesia"
+      />
+      <div>
+        <h2>Pencak Silat Keris Pusaka Institute</h2>
+        <p>Melestarikan Budaya, Membentuk Generasi Berkarakter.</p>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h3>Navigasi</h3>
+      <a href="/">Beranda</a>
+      <a href="/profil/">Profil</a>
+      <a href="/program/">Program</a>
+      <a href="/unit-latihan/">Unit Latihan</a>
+      <a href="/galeri/">Galeri</a>
+      <a href="/artikel/">Artikel</a>
+      <a href="/kontak/">Kontak</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      &copy; {new Date().getFullYear()} Pencak Silat Keris Pusaka Institute.
+      Hak cipta dilindungi.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: #14532d;
+    color: white;
+    margin-top: 0;
+    padding: 40px 24px 20px;
+    }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 500px;
+  }
+
+  .footer-brand img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+  }
+
+  .footer-brand h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+
+  .footer-brand p {
+    font-size: 14px;
+    color: #dcfce7;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 12px 24px;
+  align-content: start;
+}
+
+.footer-links h3 {
+  grid-column: 1 / -1;
+}
+
+
+  .footer-links h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+
+  .footer-links a {
+    color: #dcfce7;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #166534;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+    color: #bbf7d0;
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .footer-brand img {
+      width: 55px;
+      height: 55px;
+    }
+
+    .footer-brand h2 {
+      font-size: 15px;
+    }
+  }
+</style>

@@ -1,0 +1,147 @@
+
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+
+<Layout
+  title="Dokumentasi Try Out 18 Oktober 2026 | Keris Pusaka Institute"
+  description="Dokumentasi kegiatan Try Out Keris Pusaka Institute pada 18 Oktober 2026. Simak foto dan cerita kegiatan latihan anggota."
+>
+
+  <article class="artikel-detail">
+    <header class="artikel-header">
+      <span class="kategori">KEGIATAN</span>
+      <h1>Dokumentasi Try Out 18 Oktober 2026</h1>
+      <p class="tanggal">18 Oktober 2026</p>
+    </header>
+
+    <img
+      class="artikel-cover"
+      src="/images/galeri/try-out-18-10-2026/foto-01.webp"
+      alt="Dokumentasi kegiatan Try Out Keris Pusaka Institute"
+    />
+
+    <div class="artikel-body">
+      <p>
+        Keris Pusaka Institute melaksanakan kegiatan try out sebagai
+        bagian dari perjalanan latihan dan pengembangan kemampuan anggota.
+      </p>
+
+      <p>
+        Kegiatan ini menjadi kesempatan bagi anggota untuk mengasah
+        keterampilan, meningkatkan kesiapan, serta membangun semangat
+        kebersamaan dalam keluarga besar Keris Pusaka Institute.
+      </p>
+
+      <p>
+        Melalui kegiatan try out, anggota dapat memperoleh pengalaman
+        latihan yang lebih terarah dan memperkuat disiplin dalam
+        mempelajari pencak silat.
+      </p>
+
+      <h2>Dokumentasi Kegiatan</h2>
+      <p>
+        Berikut dokumentasi kegiatan Try Out Keris Pusaka Institute
+        pada 18 Oktober 2026.
+      </p>
+
+      <div class="artikel-galeri">
+        <img src="/images/galeri/try-out-18-10-2026/foto-02.webp" alt="Dokumentasi try out foto 2" loading="lazy" />
+        <img src="/images/galeri/try-out-18-10-2026/foto-03.webp" alt="Dokumentasi try out foto 3" loading="lazy" />
+        <img src="/images/galeri/try-out-18-10-2026/foto-04.webp" alt="Dokumentasi try out foto 4" loading="lazy" />
+        <img src="/images/galeri/try-out-18-10-2026/foto-05.webp" alt="Dokumentasi try out foto 5" loading="lazy" />
+      </div>
+
+      <a href="/artikel/" class="back-button">← Kembali ke Artikel</a>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .artikel-detail {
+    background: #f8fafc;
+    padding: 70px 24px;
+  }
+
+  .artikel-header {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .kategori {
+    color: #15803d;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+  }
+
+  .artikel-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #14532d;
+    margin: 18px 0;
+  }
+
+  .tanggal {
+    color: #64748b;
+  }
+
+  .artikel-cover {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    max-height: 500px;
+    object-fit: cover;
+    margin: 35px auto;
+    border-radius: 16px;
+  }
+
+  .artikel-body {
+    max-width: 800px;
+    margin: auto;
+    color: #334155;
+    line-height: 1.8;
+    font-size: 17px;
+  }
+
+  .artikel-body h2 {
+    color: #14532d;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 35px 0 15px;
+  }
+
+  .artikel-galeri {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 25px 0;
+  }
+
+  .artikel-galeri img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .back-button {
+    display: inline-block;
+    margin-top: 30px;
+    color: #15803d;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .artikel-header h1 {
+      font-size: 28px;
+    }
+
+    .artikel-detail {
+      padding: 45px 18px;
+    }
+  }
+</style>

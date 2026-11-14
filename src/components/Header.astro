@@ -1,0 +1,112 @@
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="/" class="brand">
+      <img
+        src="/images/logo-keris-pusaka.webp"
+        alt="Logo Keris Pusaka Indonesia"
+        class="logo"
+      />
+
+      <div class="brand-text">
+        <strong>Pencak Silat</strong>
+        <span>Keris Pusaka Institute</span>
+      </div>
+
+      <img
+        src="/images/logo-cimacan.webp"
+        alt="Logo Seni Bela Diri Aliran Cimacan"
+        class="logo"
+      />
+    </a>
+
+    <nav class="navigation">
+      <a href="/">Beranda</a>
+      <a href="/profil/">Profil</a>
+      <a href="/program/">Program</a>
+      <a href="/galeri/">Galeri</a>
+      <a href="/artikel/">Artikel</a>
+      <a href="/unit-latihan/">Unit Latihan</a>
+      <a href="/kontak/">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: #14532d;
+    color: white;
+    padding: 16px 24px;
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .brand-text strong {
+    font-size: 18px;
+  }
+
+  .brand-text span {
+    font-size: 14px;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px;
+  }
+
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .navigation a:hover {
+    color: #86efac;
+  }
+
+  @media (max-width: 600px) {
+    .logo {
+      width: 48px;
+      height: 48px;
+    }
+
+    .brand-text strong {
+      font-size: 14px;
+    }
+
+    .brand-text span {
+      font-size: 11px;
+    }
+
+    .navigation {
+      gap: 14px;
+    }
+  }
+</style>

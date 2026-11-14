@@ -1,0 +1,185 @@
+
+---
+import Layout from "../../layouts/Layout.astro";
+const articles = [
+  {
+    kategori: "KEGIATAN",
+    judul: "Dokumentasi Try Out Keris Pusaka Institute 18 Oktober 2026",
+    deskripsi: "Dokumentasi kegiatan Try Out Keris Pusaka Institute pada 18 Oktober 2026.",
+    gambar: "/images/galeri/try-out-18-10-2026/foto-01.webp",
+    link: "/artikel/try-out-18-oktober-2026/"
+  }
+];
+---
+
+<Layout
+  title="Artikel & Berita | Keris Pusaka Institute"
+  description="Artikel dan dokumentasi kegiatan Keris Pusaka Institute."
+>
+  <main class="artikel-page">
+    <section class="artikel-hero">
+      <p class="eyebrow">INFORMASI PERGURUAN</p>
+      <h1>Artikel & Berita</h1>
+      <p>Informasi dan dokumentasi kegiatan Keris Pusaka Institute.</p>
+    </section>
+
+    
+<section class="artikel-grid">
+  {articles.map((article) => (
+    <article class="artikel-card">
+      <img
+        src={article.gambar}
+        alt={article.judul}
+      />
+
+      <div class="artikel-content">
+        <span class="kategori">{article.kategori}</span>
+        <h2>{article.judul}</h2>
+        <p>{article.deskripsi}</p>
+        <a href={article.link}>Baca Selengkapnya →</a>
+      </div>
+    </article>
+  ))}
+</section>
+
+  </main>
+</Layout>
+
+<style>
+  .artikel-page {
+    background: #020617;
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 60px 24px 90px;
+  }
+
+  .artikel-page section {
+    max-width: 1024px;
+    margin-inline: auto;
+  }
+
+  .artikel-hero {
+    text-align: center;
+    padding: 30px 20px 55px;
+  }
+
+  .eyebrow {
+    color: #34d399;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+
+  .artikel-hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    margin: 18px 0;
+  }
+
+  .artikel-hero p:last-child {
+    color: #94a3b8;
+    line-height: 1.8;
+  }
+
+  .artikel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
+    gap: 24px;
+  }
+
+  .artikel-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .artikel-card:hover {
+    border-color: #34d399;
+    transform: translateY(-3px);
+  }
+
+  .artikel-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .artikel-content {
+    padding: 24px;
+  }
+
+  .kategori {
+    color: #34d399;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .artikel-content h2 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 15px 0;
+  }
+
+  .artikel-content p {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .artikel-content a {
+    color: #34d399;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .artikel-content a:hover {
+    color: #6ee7b7;
+  }
+
+  @media (max-width: 640px) {
+    .artikel-page {
+      padding: 35px 16px 60px;
+    }
+
+    .artikel-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.artikel-page {
+  background: #f8fafc;
+  color: #0f172a;
+  min-height: 100vh;
+  padding: 60px 24px 90px;
+}
+
+.artikel-hero h1 {
+  color: #14532d;
+}
+
+.artikel-hero p:last-child {
+  color: #64748b;
+}
+
+.artikel-content h2 {
+  color: #14532d;
+}
+
+.artikel-content p {
+  color: #475569;
+}
+
+.artikel-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.artikel-content a {
+  color: #15803d;
+}
+
+</style>

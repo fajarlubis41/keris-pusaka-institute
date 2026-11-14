@@ -1,0 +1,250 @@
+
+---
+import Layout from "../../layouts/Layout.astro";
+
+const programs = [
+  {
+    number: "01",
+    title: "Latihan Fisik & Teknik",
+    description:
+      "Pembinaan kondisi fisik, kekuatan, kelenturan, kecepatan, dan penguasaan teknik dasar pencak silat.",
+  },
+  {
+    number: "02",
+    title: "Olahraga Beladiri Pencak Silat",
+    description:
+      "Pembelajaran dan latihan keterampilan pencak silat sebagai olahraga beladiri untuk membentuk kemampuan dan kesiapan diri.",
+  },
+  {
+    number: "03",
+    title: "Olahraga Prestasi",
+    description:
+      "Pembinaan atlet untuk mengembangkan kemampuan, mental bertanding, sportivitas, dan prestasi dalam kompetisi pencak silat.",
+  },
+  {
+    number: "04",
+    title: "Seni Tunggal, Ganda, Regu",
+    description:
+      "Latihan seni pencak silat melalui penampilan tunggal, berpasangan, dan beregu dengan memperhatikan teknik serta kekompakan.",
+  },
+  {
+    number: "05",
+    title: "Seni Tradisi",
+    description:
+      "Pembelajaran dan pelestarian seni tradisional pencak silat sebagai bagian dari warisan budaya bangsa.",
+  },
+];
+---
+
+<Layout title="Program Perguruan | Keris Pusaka Institute">
+  <section class="program-hero">
+    <p class="eyebrow">PROGRAM PERGURUAN</p>
+    <h1>Program Pembinaan <span>Pencak Silat</span></h1>
+    <p class="hero-description">
+      Beragam program latihan dan pembinaan untuk mengembangkan
+      kemampuan, karakter, serta prestasi anggota Keris Pusaka Institute.
+    </p>
+  </section>
+
+  <section class="program-section">
+    <div class="section-heading">
+      <p>PEMBINAAN ANGGOTA</p>
+      <h2>Program Latihan</h2>
+    </div>
+
+    <div class="program-grid">
+      {programs.map((program) => (
+        <article class="program-card">
+          <span class="program-number">{program.number}</span>
+          <div class="program-icon">✦</div>
+          <h3>{program.title}</h3>
+          <p>{program.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="program-cta">
+    <h2>Siap Bergabung dengan Keris Pusaka Institute?</h2>
+    <p>
+      Kenali unit latihan terdekat dan temukan tempat untuk belajar
+      serta mengembangkan kemampuan pencak silat.
+    </p>
+    <a href="/unit-latihan/" class="cta-button">
+      Lihat Unit Latihan →
+    </a>
+  </section>
+</Layout>
+
+<style>
+  .program-hero {
+    padding: 80px 24px 65px;
+    text-align: center;
+    background: #f8fafc;
+  }
+
+  .eyebrow {
+    color: #15803d;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 14px;
+  }
+
+  .program-hero h1 {
+    color: #14532d;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  .program-hero h1 span {
+    color: #16a34a;
+  }
+
+  .hero-description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #64748b;
+    line-height: 1.8;
+  }
+
+  .program-section {
+    padding: 60px 24px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .section-heading p {
+    color: #15803d;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+  }
+
+  .section-heading h2 {
+    color: #14532d;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .program-card {
+    position: relative;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 18px;
+    padding: 28px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(21, 128, 61, 0.10);
+  }
+
+  .program-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: #bbf7d0;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .program-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: #dcfce7;
+    color: #15803d;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+
+  .program-card h3 {
+    color: #166534;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+
+  .program-card p {
+    color: #64748b;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  .program-cta {
+    margin: 20px 24px 60px;
+    padding: 50px 24px;
+    text-align: center;
+    background: #14532d;
+    border-radius: 22px;
+  }
+
+  .program-cta h2 {
+    color: white;
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .program-cta p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #dcfce7;
+    line-height: 1.8;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 13px 24px;
+    background: #22c55e;
+    color: #052e16;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.2s;
+  }
+
+  .cta-button:hover {
+    background: #4ade80;
+  }
+
+  @media (max-width: 900px) {
+    .program-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .program-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .program-hero {
+      padding: 60px 20px 45px;
+    }
+
+    .program-section {
+      padding: 45px 20px;
+    }
+
+    .program-cta {
+      margin: 10px 20px 40px;
+    }
+  }
+</style>

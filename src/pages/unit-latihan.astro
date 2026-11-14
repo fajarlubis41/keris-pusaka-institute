@@ -1,0 +1,165 @@
+
+---
+import Layout from "../layouts/Layout.astro";
+
+const units = [
+  {
+    nama: "Unit Latihan Bantan",
+    pelatih: "Siti Fazira Nasution",
+    jadwal: "Rabu & Jumat, 16.00 WIB",
+    alamat: "Aula Kantor Lurah Bantan",
+    maps: "https://www.google.com/maps/search/?api=1&query=Kantor+Lurah+Bantan",
+    whatsapp: "6283117722763"
+  },
+   {
+    nama: "Unit Latihan Sidorejo Hilir",
+    pelatih: "Adit",
+    jadwal: "Selasa & Sabtu, 16.00 WIB",
+    alamat: "Aula Kantor Lurah Sidorejo Hilir",
+    maps: "https://www.google.com/maps?client=firefox-b-d&hs=zjzq&sca_esv=9d3573bd1f78f23b&output=search&q=kantor+lurah+sidorejo+hilir",
+    whatsapp: "6281234567890"
+  }
+];
+---
+
+<Layout>
+  <main>
+    <section class="unit-header">
+      <span class="label">LOKASI LATIHAN</span>
+      <h1>Unit Latihan Keris Pusaka</h1>
+      <p>
+        Temukan unit latihan Keris Pusaka Indonesia
+        di wilayah kamu.
+      </p>
+    </section>
+    
+    <section class="unit-container">
+    {units.map((unit) => (
+        <article class="unit-card">
+        <h2>{unit.nama}</h2>
+
+        <p><strong>Pelatih:</strong> {unit.pelatih}</p>
+        <p><strong>Jadwal:</strong> {unit.jadwal}</p>
+        <p><strong>Alamat:</strong> {unit.alamat}</p>
+
+        <div class="unit-actions">
+            <a
+            href={unit.maps}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="unit-button"
+            >
+            Lihat Google Maps
+            </a>
+
+            <a
+            href={`https://wa.me/${unit.whatsapp}?text=${encodeURIComponent("Halo Kak, saya ingin bertanya tentang latihan Keris Pusaka")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="unit-button"
+            >
+            Hubungi Pelatih
+            </a>
+        </div>
+        </article>
+    ))}
+    </section>
+
+
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: 24px;
+  }
+
+  .unit-header {
+    text-align: center;
+    padding: 80px 24px 40px;
+  }
+
+  .label {
+    color: #15803d;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    color: #14532d;
+    font-size: 42px;
+    margin: 20px 0;
+  }
+
+  .unit-header p {
+    color: #475569;
+    line-height: 1.8;
+  }
+
+  .unit-container {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+  }
+
+  .unit-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+  .unit-card h2 {
+    color: #166534;
+  }
+
+  .unit-card p {
+    color: #475569;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 650px) {
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  .unit-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .unit-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #15803d;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+
+  .unit-button:hover {
+    background: #166534;
+    transform: translateY(-2px);
+  }
+
+.unit-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .unit-container {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+}
+
+</style>

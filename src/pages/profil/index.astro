@@ -1,0 +1,233 @@
+
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Profil Perguruan | Keris Pusaka Institute">
+  <section class="profil-hero">
+    <p class="eyebrow">PROFIL PERGURUAN</p>
+    <h1>Mengenal Keris Pusaka Institute</h1>
+    <p>
+      Mengenal perjalanan, nilai, dan semangat pelestarian
+      pencak silat bersama Keris Pusaka Institute.
+    </p>
+  </section>
+
+  <section class="profil-section">
+    
+<div class="profil-container">
+  <div class="profil-card">
+    <h2>Sejarah dan Pendiri</h2>
+
+    <p>
+      Keris Pusaka Institute merupakan Perguruan Pencak Silat
+      Keris Pusaka Aliran Cimacan yang didirikan oleh
+      <strong>Kiyai Muhammad Yahya Wijaya Kesuma</strong>,
+      berasal dari Banten.
+    </p>
+
+    <p>
+      Keris Pusaka Institute diresmikan pada 6 Juli 1988
+      di Desa Bakaran Batu, Kecamatan Batang Kuis,
+      Kabupaten Deli Serdang, Provinsi Sumatera Utara.
+    </p>
+
+    <p>
+      Peresmian perguruan ini menetapkan keberadaannya
+      untuk jangka waktu dan tempat yang tidak ditentukan.
+    </p>
+  </div>
+
+  <div class="profil-card">
+    <h2>Identitas Perguruan</h2>
+
+    <p>
+      Keris Pusaka Institute merupakan perguruan seni bela diri
+      pencak silat yang berkomitmen menjaga dan melestarikan
+      seni bela diri serta membina generasi muda.
+    </p>
+
+    <p>
+      Pembinaan tidak hanya berfokus pada kemampuan bela diri,
+      tetapi juga pada pembentukan fisik, mental, ketangkasan,
+      adab, akhlak, disiplin, dan ketakwaan kepada
+      Tuhan Yang Maha Esa.
+    </p>
+  </div>
+</div>
+
+<div class="tanggal-peresmian">
+  <p>TANGGAL PERESMIAN PERGURUAN</p>
+  <h2>6 JULI 1988</h2>
+  <span>Desa Bakaran Batu · Batang Kuis · Deli Serdang · Sumatera Utara</span>
+</div>
+
+  </section>
+
+  <section class="nilai-section">
+    <div class="nilai-container">
+      <h2>Nilai dan Filosofi Perguruan</h2>
+
+      <div class="nilai-grid">
+        <article class="nilai-card">
+          <h3>Disiplin</h3>
+          <p>Membentuk pribadi yang bertanggung jawab dan konsisten.</p>
+        </article>
+
+        <article class="nilai-card">
+          <h3>Persaudaraan</h3>
+          <p>Menumbuhkan kebersamaan dan saling menghormati.</p>
+        </article>
+
+        <article class="nilai-card">
+          <h3>Penghormatan</h3>
+          <p>Menghargai pelatih, sesama anggota, dan masyarakat.</p>
+        </article>
+
+        <article class="nilai-card">
+          <h3>Pelestarian Budaya</h3>
+          <p>Menjaga pencak silat sebagai warisan budaya bangsa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .profil-hero {
+    text-align: center;
+    padding: 70px 24px;
+    background: #f8fafc;
+  }
+
+  .eyebrow {
+    color: #15803d;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .profil-hero h1 {
+    color: #14532d;
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 20px 0;
+  }
+
+  .profil-hero p {
+    color: #64748b;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .profil-section,
+  .nilai-section {
+    padding: 50px 24px;
+  }
+
+  .profil-container,
+  .nilai-container {
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .profil-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .profil-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+  .profil-card h2 {
+    color: #166534;
+    margin-top: 0;
+  }
+
+  .profil-card p {
+    color: #475569;
+    line-height: 1.8;
+  }
+
+  .nilai-section {
+    background: #f8fafc;
+  }
+
+  .nilai-container > h2 {
+    text-align: center;
+    color: #14532d;
+    margin-bottom: 35px;
+  }
+
+  .nilai-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .nilai-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  .nilai-card h3 {
+    color: #15803d;
+  }
+
+  .nilai-card p {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .profil-container {
+      grid-template-columns: 1fr;
+    }
+
+    .nilai-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nilai-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.tanggal-peresmian {
+  max-width: 1100px;
+  margin: 35px auto 0;
+  padding: 35px 24px;
+  text-align: center;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 20px;
+}
+
+.tanggal-peresmian p {
+  color: #15803d;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.tanggal-peresmian h2 {
+  color: #14532d;
+  font-size: clamp(30px, 5vw, 48px);
+  margin: 15px 0;
+}
+
+.tanggal-peresmian span {
+  color: #475569;
+  line-height: 1.8;
+}
+
+</style>
