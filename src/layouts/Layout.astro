@@ -20,6 +20,18 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="id_ID" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Keris Pusaka Institute",
+      "url": "https://kerispusakainstitute.com/",
+      "logo": "https://kerispusakainstitute.com/images/logo-keris-pusaka.webp",
+      "description": "Perguruan pencak silat Keris Pusaka Institute yang melestarikan budaya, disiplin, dan prestasi.",
+      "sameAs": [
+        "https://www.instagram.com/kerispusakainstitute/",
+        "https://www.tiktok.com/@kerispusakacimacan"
+      ]
+    })} />
     <link rel="canonical" href={Astro.url.href} />
     <link rel="icon" type="image/webp" href="/images/logo-keris-pusaka.webp" />
     <title>{title}</title>
