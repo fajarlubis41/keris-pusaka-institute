@@ -82,6 +82,10 @@ import Layout from "../../layouts/Layout.astro";
       </div>
 
       <a href="/artikel/" class="back-button">← Kembali ke Artikel</a>
+      <section class="komentar-artikel">
+        <h2>Komentar</h2>
+        <div data-disfora-comments></div>
+      </section>
     </div>
   </article>
 </Layout>
@@ -171,5 +175,15 @@ import Layout from "../../layouts/Layout.astro";
     .artikel-detail {
       padding: 45px 18px;
     }
+  }
+    .komentar-artikel {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .komentar-artikel h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
   }
 </style>
