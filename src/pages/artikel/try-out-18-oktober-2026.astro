@@ -83,9 +83,15 @@ import Layout from "../../layouts/Layout.astro";
 
       <a href="/artikel/" class="back-button">← Kembali ke Artikel</a>
       <section class="komentar-artikel">
-        <h2>Komentar</h2>
-        <div data-disfora-comments></div>
-      </section>
+  <h2>Komentar</h2>
+
+  <div class="commentbox"></div>
+        <script is:inline src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+
+        <script is:inline>
+          commentBox("5713170857459712-proj");
+        </script>
+</section>
     </div>
   </article>
 </Layout>
